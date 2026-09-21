@@ -2,7 +2,7 @@
 
 This page covers installing SimpleAF using the strain gauges (load cells) already built into the bed of your printer as the probe. There is no extra probe hardware to buy or mount, the nozzle taps the bed and the bed load cells detect the contact.
 
-!!! danger
+!!! klipper-error  "EXTREMELY EXPERIMENTAL"
 
     Load cell probing is **EXTREMELY EXPERIMENTAL**. The nozzle is pushed onto the bed with a force measured by the load cells, if the load cells are not calibrated properly or something else goes wrong you can damage your printer. Be ready to hit the e-stop button in your UI or Grumpyscreen, or the power button, and never leave your printer unattended while homing, probing or bed meshing.
 
@@ -10,7 +10,7 @@ This page covers installing SimpleAF using the strain gauges (load cells) alread
 
     Load cell probing **REQUIRES [Kalico](kalico.md)**. It does **NOT** work with Klipper. The installer will refuse to install loadcells unless you pass the `--kalico` argument.
 
-New here? See [Getting Started](getting-started.md).
+This page covers installing SimpleAF using the stock loadcells. New here? See [Getting Started](getting-started.md).
 
 ## Supported Printers
 
@@ -45,6 +45,8 @@ The Ender 3 V3 keeps using its physical endstop for homing Z, the load cells are
 
     The installation can only be performed on a printer which has been rooted and ssh granted, and you need root access, if you are not already root, then follow the [Enable Root Access](enable-root-access.md) instructions.
 
+### Factory Reset
+
 If you've installed Guilouz's Helper Script, or installed Fluidd or Mainsail through any other means (such as from Creality directly), you need to [factory reset](factory_reset.md) before continuing.
 
 ### Clone the Repo
@@ -59,6 +61,10 @@ git clone https://github.com/pellcorp/creality.git /usr/data/pellcorp
     If you had already cloned the pellcorp creality repository before being asked to factory reset, the git repo is still there and you can skip the cloning step!
 
 ### Run the installer
+
+!!! note
+
+    If you have pellcorp-overrides in github but not stored locally, [you need to recreate the ~/pellcorp-overrides directory](config_overrides.md#create-local-repo) before running the installer.sh!
 
 The `--kalico` argument is required, the installer will refuse to install loadcells without it.
 
