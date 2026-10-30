@@ -186,6 +186,7 @@ nav:
   - Load Cells:
       - loadcells.md
       - loadcells_zoffset.md
+      - known_weights.md
   - Rpi:
       - Setup:
           - rpi.md

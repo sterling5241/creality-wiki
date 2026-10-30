@@ -96,6 +96,8 @@ You need an object of known weight, weigh it on a kitchen scale.
 
     New spools of filament work well, a brand new spool is typically 1000 g of filament plus the spool itself, which is about 250 g for a bamboo plastic spool or about 175 g for a cardboard spool.  Weight whatever you use on a kitchen scale and enter the real weight.
 
+    No spools? See [Known Weights](known_weights.md) for a list of household items that weigh about 6 kg.
+
 --steps--
 
 1. Remove everything from the bed
